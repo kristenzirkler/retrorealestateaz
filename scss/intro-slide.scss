@@ -1,20 +1,71 @@
 // Home Page Slide
 
-$content-width: 600px;
+$content-width: 650px;
 $content-height: 270px;
+
+$content-width-tablet: 500px;
+$content-height-tablet: 270px;
+
+.intro-background {
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	z-index: -1;
+	opacity: .2;
+
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-clip: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.intro-pattern {
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	z-index: 1;
+	background-repeat: repeat;
+	background-size: 92px 119px;
+}
 
 .intro-slide {
 	position: fixed;
 	top: 0; bottom: 0;
 	left: 0; right: 0;
 
+	min-height: 400px;
+	min-width: 320px;
+
 	.john-photo {
-		position: absolute;
-		z-index: 2;
-		top: 70px;
-		right: -40px;
-		width: 200px;
 		display: none;
+		position: absolute;
+		top: 40px;
+		z-index: 2;
+		right: -40px;
+		width: 215px;
+		height: 300px;
+
+		background-repeat: no-repeat;
+		background-position: right bottom;
+		background-clip: fixed;
+		-webkit-background-size: contain;
+		-moz-background-size: contain;
+		-o-background-size: contain;
+		background-size: contain;
+
+		text-indent: -5000px;
+	}
+	.intro-content {
+		text-align: center;
+		padding: 30px;
+	}
+	.intro-product {
+		position: relative;
+		width: 100%;
+		z-index: 3;
+		text-align: left;
 	}
 	.logo {
 		width: 100%;
@@ -52,7 +103,7 @@ $content-height: 270px;
 		width: 100%;
 		overflow: hidden;
 		text-transform: uppercase;
-		padding: 40px 0 50px;
+		padding: 10px 0 10px;
 		text-align: left;
 
 		position: fixed;
@@ -70,8 +121,8 @@ $content-height: 270px;
 		> li {
 			display: block;
 			text-align: center;
-			font-size: 32px;
-			margin: 0 0 30px;
+			font-size: 24px;
+			margin: 0 0 5px;
 		}
 		li ul {
 			display: none;
@@ -81,58 +132,48 @@ $content-height: 270px;
 		}
 	}
 }
-.intro-content {
-	position: relative;
-	z-index: 10;
-	padding: 30px;
-}
-.intro-background {
-	position: absolute;
-	top: 0; bottom: 0;
-	left: 0; right: 0;
-	z-index: -1;
-	opacity: .2;
-
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-clip: fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-.intro-pattern {
-	position: absolute;
-	top: 0; bottom: 0;
-	left: 0; right: 0;
-	z-index: 1;
-	background-repeat: repeat;
-	background-size: 92px 119px;
-}
-
 
 // Responsive
-@media all and (min-width: 420px) {
+@media all and (min-width: 360px) {
+
+.intro-slide {
+	.john-photo {
+		display: block;
+	}
+	.navigation {
+		padding: 40px 0 50px;
+		> li {
+			margin: 0 0 30px;
+		}
+	}
+}
+
+}
+// Tablet & Up
+@media all and (min-width: 550px) {
 // Tablet & Up
 
 .intro-slide {
 	.john-photo {
-		width: 400px;
-		right: -30px;
+		width: 45vw;
 		top: auto;
 		bottom: 0;
+		right: -30px;
+		height: 100vh;
+		max-height: 450px;
+
 	}
 	.logo {
+		max-width: 235px;
 		float: left;
-		max-width: 300px;
-		margin-right: 40px;
+		margin-right: 30px;
 	}
 	.contact {
-		font-size: 24px;
+		font-size: 20px;
 		float: left;
 	}
 	.phone {
-		font-size: 44px;
+		font-size: 36px;
 	}
 	.button {
 		width: 100%;
@@ -151,39 +192,77 @@ $content-height: 270px;
 		}
 	}
 	.footer-logos {
-
 		position: relative;
 
 		z-index: 4;
 		opacity: 1;
+		bottom: auto;
+		left: auto; right: auto;
 	}
-}
-.intro-content {
-	text-align: center;
-	padding: 0;
+	.intro-content {
+		padding: 0;
+		min-width: $content-width-tablet;
+		width: 70vw;
+		
+		position: absolute;
+		z-index: 10;
+		top: 0; bottom: 0;
+		left: 0;
+	}
+	.intro-product {
+		position: absolute;
+		width: 100%;
 
-    width: 100%;
-    max-width: $content-width;
-    margin-left: -($content-width/2);
+		left: 50%;
+		max-width: $content-width-tablet;
+	    margin-left: -($content-width-tablet/2);
 
-    height: $content-height;
+		top: 50%;
+	    height: $content-height-tablet;
+	    margin-top: -($content-height-tablet/2);
 
-    text-align: center;
+	    text-align: center;
 
-    position: absolute;
-    top: 100px;
-    left: 50%;
+	}
 }
 // End Tablet & Up
 }
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 900px) {
 // Desktop & Up
 
-.intro-content {
+.intro-slide {
 
-    top: 50%;
-    margin-top: -($content-height/2);
+	.logo {
+		float: left;
+		max-width: 300px;
+		margin-right: 40px;
+	}
+	.contact {
+		font-size: 24px;
+	}
+	.phone {
+		font-size: 44px;
+	}
+	.navigation {
+		> li {
+			font-size: 32px;
+		}
+
+	}
+	.intro-content {
+		padding: 0;
+		min-width: $content-width;
+	}
+	.intro-product {
+		max-width: $content-width;
+	    margin-left: -($content-width/2);
+
+	    height: $content-height;
+	    margin-top: -($content-height/2);
+
+	}
+
 }
 
 
@@ -194,10 +273,6 @@ $content-height: 270px;
 // Short borwser Windows
 @media screen and ( min-height: 500px ){
 
-.intro-slide {
-	.john-photo {
-		display: block;
-	}
-}
+
     
 }
