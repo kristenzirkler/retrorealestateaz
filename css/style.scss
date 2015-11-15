@@ -7,6 +7,9 @@
 @import 'icons';
 @import 'site-frame';
 @import 'buttons';
+@import 'intro-slide';
+
+@import url(https://fonts.googleapis.com/css?family=Boogaloo);
 
 * {
   -webkit-box-sizing: border-box;
@@ -32,19 +35,6 @@ a {
 p {
   line-height: 1.5em;
   margin-bottom: 1em;
-}
-
-.button {
-  padding: 1em 1.5em;
-  color: #fff;
-  display: inline-block;
-  background: $main-color;
-  font-family: $accent-font;
-  text-transform: uppercase;
-  &:hover {
-    color: #fff;
-    background: lighten($main-color,10);
-  }
 }
 
 // Headers

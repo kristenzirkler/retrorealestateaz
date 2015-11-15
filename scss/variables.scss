@@ -2,13 +2,18 @@ $body-background: #fff;
 
 $page-background: $body-background;
 
-$main-color: #7dc52f;
+$blue: #1cb3b7;
+$blue-light: #73cdd8;
+$yellow: #e4cd52;
+$yellow-dark: #9A8517;
+
+$main-color: $yellow;
 
 $gray-lightest: #f5f4f2;
 $gray-light: #d4d4d2;
 $gray: #8d9095;
 
-$font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+$font-family: 'Boogaloo', Helvetica, Arial, 'Lucida Grande', sans-serif;
 $accent-font: Arial, 'Lucida Grande', sans-serif;
 
 $font-color: #000;

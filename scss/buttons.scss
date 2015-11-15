@@ -3,7 +3,7 @@
   color: #fff;
   display: inline-block;
   background: $main-color;
-  font-family: $accent-font;
+  color: darken($main-color, 40);
   text-transform: uppercase;
 
   display: block;
@@ -11,7 +11,7 @@
 
   @include transition(all .3s);
   &:hover {
-    color: #fff;
+    color: darken($main-color, 40);
     background: darken($main-color,10);
   }
 }
