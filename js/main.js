@@ -7,7 +7,7 @@ $(function(){
 		$('.nav').toggleClass('nav-open');
 	});
 
-    $('.intro-background').css('background-image', 'url(../img/home-photo-5.jpg').fadeIn(100);
+    $('.intro-background').css('background-image', 'url(http://kristenzirkler.github.io/retrorealestateaz/img/home-photo-5.jpg').fadeIn(100);
 
 	var homeImages = [];
 	homeImages[0] = "http://kristenzirkler.github.io/retrorealestateaz/img/home-photo-0.jpg";
