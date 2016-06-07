@@ -9,7 +9,7 @@
 @import 'buttons';
 @import 'intro-slide';
 
-@import url(https://fonts.googleapis.com/css?family=Boogaloo);
+@import url(https://fonts.googleapis.com/css?family=Boogaloo|Work+Sans:400,700);
 
 * {
   -webkit-box-sizing: border-box;
@@ -17,9 +17,8 @@
   box-sizing: border-box;
 }
 body {
-  background: $body-background;
+  background-color: $body-background;
   color: $font-color;
-
 }
 body, button, label {
   font-family: $font-family;
@@ -42,11 +41,12 @@ h1, h2, h3, h4 {
   font-family: $accent-font;
 }
 h1 {
-  font-size: 32px;
+  font-size: 36px;
   line-height: 1.2em;
+  color: $black;
 }
 h2 {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.4em;
 }
 h3 {

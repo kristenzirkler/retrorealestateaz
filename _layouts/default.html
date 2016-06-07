@@ -29,7 +29,13 @@
 
 </head>
 
-<body class="{{ page.slug }}">
+{% if page.slug == "home" %}
+<body class="home page page-template page-template-page-full-php custom-background et_fullwidth_view {{ page.slug }}">
+{% else %}
+<body class="page page-template page-template-page-full-php custom-background et_fullwidth_view {{ page.slug }}">
+{% endif %}
+
+
 <!--[if lt IE 7]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -38,16 +44,15 @@
 {% include header.html %}
 {% endif %}
 
+<div class="content">
+
 {% if page.slug != "home" %}
-<div class="page-header">
-  <div class="inner">
-    <h1>{{page.title}}</h1>
+  <div class="page-header">
+      <h1>{{page.title}}</h1>
   </div>
-</div>
 {% endif %}
 
-<div class="content">
-{{ content }}
+  {{ content }}
 </div>
 
 {% if page.slug != "home" %}

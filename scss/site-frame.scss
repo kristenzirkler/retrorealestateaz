@@ -1,81 +1,137 @@
 $nav-height: 60px;
 $footer-height: 50px;
-
 body {
-	margin-top: $nav-height;
+	background-image: url(/img/pattern-bg.png);
+	background-repeat: repeat;
+	background-size: 92px 119px;
 }
-
-.site-navigation {
-	@include transition(all 1s);
-	background: #fff;
-	box-shadow: 0 0 10px rgba(#000,.3);
-
-	position: fixed;
-	top: 0; left: 0; right: 0;
-	z-index: 100;
-	a {
-		color: $main-color;
-	}
+.site-header, .content, .footer {
+	max-width: $page-size;
+	margin: 0 auto;
+}
+.content, .footer {
+	background: $white;
+	border: 1px solid $border-color;
+	border-top: none;
+	padding: 30px; 
+}
+.home .content {
+	padding: 0;
+	background: none;
+	border: none;
+	font-family: $accent-font;
+	color: $black;
+}
+.site-header {
+	font-family: $accent-font;
+	padding-top: 20px;
+	color: $black;
 	.logo {
-		display: inline-block;
+		padding-top: 20px;
+		width: 100%;
+		max-width: 250px;
 		float: left;
-		margin: 8px 10px 0;
-		//line-height: $nav-height;
-		//font-family: $accent-font;
-		//text-transform: uppercase;
-		//font-size: 1.5em;
-		img {
-			width: 200px;
-		}
 	}
-	.mobile-toggle {
+	.contact {
 		float: right;
-		border: 1px solid $main-color;
-		display: inline-block;
-		margin: 5px 10px;
-		border-radius: 50%;
-		width: $nav-height - 10;
-		height: $nav-height - 10;
 		text-align: center;
-		i {
-			padding: 0 .5em;
-			font-size: 1.3em;
-			line-height: $nav-height - 10;
+		font-size: 20px;
+	}
+	.phone {
+		padding-top: 20px;
+		font-size: 36px;
+		margin-bottom: 10px;
+		letter-spacing: 2px;
+	}
+	.email {
+		margin-bottom: 20px;
+	}
+	.john-photo {
+		float: right;
+		width: 215px;
+		height: 200px;
+
+		background-repeat: no-repeat;
+		background-position: right bottom;
+		background-clip: fixed;
+		-webkit-background-size: contain;
+		-moz-background-size: contain;
+		-o-background-size: contain;
+		background-size: contain;
+
+		text-indent: -5000px;
+	}
+}
+.site-navigation {
+	clear: both;
+	background: $white;
+	overflow: hidden;
+	text-align: center;
+	font-size: 36px;
+	text-transform: uppercase;
+	border: 1px solid $border-color;
+	padding: 30px 0; 
+	li {
+		display: inline-block;
+		margin: 0 20px;
+		ul {
+			display: none;
 		}
 	}
-	ul {
-		display: block;
-		clear: both;
-		text-align: center;
-		display: none;
-		@include transition(all 1s);
+	a {
+		color: $black;
 	}
-	li {
-		font-size: 1.1em;
-		font-family: $accent-font;
-		line-height: $nav-height;
-		border-top: 1px solid $gray-lightest;
+}
+.mobile-toggle {
+	display: inline-block;
+	display: none;
+	float: right;
+	border: 1px solid $main-color;
+	margin: 5px 10px;
+	border-radius: 50%;
+	width: $nav-height - 10;
+	height: $nav-height - 10;
+	text-align: center;
+	i {
+		padding: 0 .5em;
+		font-size: 1.3em;
+		line-height: $nav-height - 10;
 	}
 }
 .footer {
-	background: $main-color;
-	color: #fff;
 	overflow: hidden;
-
-	a {
-		color: #fff;
-	}
-	.logo {
-		display: inline-block;
+	font-family: $accent-font;
+	.button, .contact {
 		float: left;
-		margin: 0 20px;
-		line-height: $nav-height;
-		font-family: $accent-font;
-		text-transform: uppercase;
-		font-size: 1.5em;
+	}
+	.button {
+		margin-right: 20px;
+	}
+	.contact {
+		color: $black;
+	}
+	.phone {
+		font-size: 24px;
+		margin-bottom: 5px;
+	}
+	
+}
+.footer-logos {
+	max-width: 290px;
+	float: right;
+}
+.copyright {
+	text-align: center;
+	display: block;
+	margin: 20px;
+	font-size: 12px;
+	color: $gray-dark;
+}
+.content {
+	h1 {
+		margin-bottom: 30px;
 	}
 }
-
 
 
 .hide {
@@ -98,21 +154,6 @@ body {
 	.site-navigation {
 		.mobile-toggle {
 			display: none;
-		}
-		.nav {
-			display: inline-block;
-			clear: none;
-
-			float: right;
-			overflow: hidden;
-			line-height: $nav-height;
-			margin: 0 20px;
-			li {
-				display: inline-block;
-				margin: 0 .5em;
-				border-top: none;
-			}
-
 		}
 	}
 
