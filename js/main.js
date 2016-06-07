@@ -4,7 +4,12 @@ $(function(){
 	// Mobile Nav
 	$('.mobile-toggle').click(function(event) {
 	    event.preventDefault();
-		$('.nav').toggleClass('nav-open');
+		$('.site-navigation').toggleClass('nav-open');
+	});
+	// Sub Nav
+	$('.site-navigation-toggle').click(function(event) {
+	    event.preventDefault();
+		$('.site-navigation-menu').toggleClass('nav-open');
 	});
 
     $('.intro-background').css('background-image', 'url(http://kristenzirkler.github.io/retrorealestateaz/img/home-photo-5.jpg').fadeIn(100);
