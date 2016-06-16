@@ -15,12 +15,12 @@ $(function(){
     $('.intro-background').css('background-image', 'url(http://kristenzirkler.github.io/retrorealestateaz/img/home-photo-5.jpg').fadeIn(100);
 
 	var homeImages = [];
-	homeImages[0] = "http://kristenzirkler.github.io/retrorealestateaz/img/home-photo-0.jpg";
-	homeImages[1] = "http://kristenzirkler.github.io/retrorealestateaz/img/home-photo-1.jpg";
-	homeImages[2] = "http://kristenzirkler.github.io/retrorealestateaz/img/home-photo-2.jpg";
-	homeImages[3] = "http://kristenzirkler.github.io/retrorealestateaz/img/home-photo-3.jpg";
-	homeImages[4] = "http://kristenzirkler.github.io/retrorealestateaz/img/home-photo-4.jpg";
-	homeImages[5] = "http://kristenzirkler.github.io/retrorealestateaz/img/home-photo-5.jpg";
+	homeImages[0] = 'http://kristenzirkler.github.io/retrorealestateaz/img/home-photo-0.jpg';
+	homeImages[1] = 'http://kristenzirkler.github.io/retrorealestateaz/img/home-photo-1.jpg';
+	homeImages[2] = 'http://kristenzirkler.github.io/retrorealestateaz/img/home-photo-2.jpg';
+	homeImages[3] = 'http://kristenzirkler.github.io/retrorealestateaz/img/home-photo-3.jpg';
+	homeImages[4] = 'http://kristenzirkler.github.io/retrorealestateaz/img/home-photo-4.jpg';
+	homeImages[5] = 'http://kristenzirkler.github.io/retrorealestateaz/img/home-photo-5.jpg';
 
 	var i = 0;
 	setInterval(fadeDivs, 5000);
